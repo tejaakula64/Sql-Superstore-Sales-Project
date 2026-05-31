@@ -1,0 +1,39 @@
+/*
+=====================================================================================
+DDL Script: Creating Bronze Table
+====================================================================================== 
+Script Purpose: 
+	This script creates tables in the 'bronze' schema, dropping existing table 
+	if they already exist. 
+	Run this script to re-define the DDL structure of 'bronze' Table
+=======================================================================================
+*/
+
+IF OBJECT_ID('bronze.Superstore_sales', 'U') IS NOT NULL 
+	DROP TABLE bronze.Superstore_sales;
+GO
+
+CREATE TABLE bronze.Superstore_sales(
+[Row ID]  INT, 
+[Order ID]  NVARCHAR(50),
+[Order Date] NVARCHAR(50),
+[Ship Date] NVARCHAR(50), 
+[Ship Mode] NVARCHAR(50),
+[Customer ID] NVARCHAR(50), 
+[Customer Name] NVARCHAR(50), 
+[Segment] NVARCHAR(50),  
+[Country] NVARCHAR(50), 
+[City] NVARCHAR(50), 
+[State] NVARCHAR(50), 
+[Postal code] INT, 
+[Region] NVARCHAR(50),
+[Product ID] NVARCHAR(50), 
+[Category] NVARCHAR(50), 
+[Sub-Category] NVARCHAR(50), 
+[Product Name] NVARCHAR(150), 
+[Sales] NVARCHAR(500), 
+Quantity NVARCHAR(50), 
+Discount NVARCHAR(50),
+Profit NVARCHAR(50)
+);  
+GO
