@@ -37,7 +37,9 @@ BEGIN
 		WITH(
 		FIRSTROW=2, 
 		FIELDTERMINATOR=',', 
-		TABLOCK
+		ROWTERMINATOR='0x0a',
+		CODEPAGE='65001',
+		FORMAT='CSV'
 		);  
 		SET @end_time=GETDATE(); 
 		PRINT'Load Duraction '+CAST(DATEDIFF(second, @start_time, @end_time) AS NVARCHAR)+' seconds';
