@@ -1,6 +1,13 @@
-
-
-
+/*
+=====================================================================================
+DDL Script: Creating Silver Table
+====================================================================================== 
+Script Purpose: 
+	This script creates tables in the 'Silver' schema, dropping existing table 
+	if they already exist. 
+	Run this script to re-define the DDL structure of 'Silver' Table
+=======================================================================================
+*/
 
 
 IF OBJECT_ID('silver.Superstore_sales', 'U') IS NOT NULL 
