@@ -13,27 +13,27 @@ IF OBJECT_ID('bronze.Superstore_sales', 'U') IS NOT NULL
 	DROP TABLE bronze.Superstore_sales;
 GO
 
-CREATE TABLE bronze.Superstore_sales(
-Row_ID  INT, 
-Order_ID  NVARCHAR(50),
-Order_Date DATE,
-Ship_Date DATE, 
-Ship_Mode NVARCHAR(50),
-Customer_ID NVARCHAR(50), 
-Customer_Name NVARCHAR(50), 
-Segment NVARCHAR(50),  
-Country NVARCHAR(50), 
-City NVARCHAR(50), 
-State NVARCHAR(50), 
-Postal_code INT, 
-Region NVARCHAR(50),
-Product_ID NVARCHAR(50), 
-Category NVARCHAR(50), 
-Sub_Category NVARCHAR(50), 
-Product_Name NVARCHAR(150), 
-Sales FLOAT, 
-Quantity FLOAT, 
-Discount FLOAT,
-Profit FLOAT
-);  
+CREATE TABLE bronze.Superstore_sales (
+    Row_ID INT,
+    Order_ID NVARCHAR(50),
+    Order_Date NVARCHAR(50),   
+    Ship_Date NVARCHAR(50),  
+    Ship_Mode NVARCHAR(50),
+    Customer_ID NVARCHAR(50),
+    Customer_Name NVARCHAR(100),
+    Segment NVARCHAR(50),
+    Country NVARCHAR(50),
+    City NVARCHAR(50),
+    State NVARCHAR(50),
+    Postal_code NVARCHAR(20),   
+    Region NVARCHAR(50),
+    Product_ID NVARCHAR(50),
+    Category NVARCHAR(50),
+    Sub_Category NVARCHAR(50),
+    Product_Name NVARCHAR(255),
+    Sales FLOAT,
+    Quantity INT,            
+    Discount FLOAT,
+    Profit FLOAT
+);
 GO 
