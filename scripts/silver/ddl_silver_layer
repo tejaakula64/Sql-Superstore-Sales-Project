@@ -1,0 +1,38 @@
+
+
+
+
+
+IF OBJECT_ID('silver.Superstore_sales', 'U') IS NOT NULL 
+    DROP TABLE silver.Superstore_sales;
+GO
+
+CREATE TABLE silver.Superstore_sales (
+    Row_ID          INT,
+    Country_Code    NVARCHAR(10),
+    Order_year      INT,
+    Order_ID        NVARCHAR(50),      
+    Order_Date      DATE,
+    Ship_Date       DATE,
+    Ship_Mode       NVARCHAR(50),
+    Customer_ID     NVARCHAR(50),
+    Customer_Name   NVARCHAR(100),
+    Segment         NVARCHAR(50),
+    Country         NVARCHAR(50),
+    City            NVARCHAR(50),
+    State           NVARCHAR(50),
+    Postal_code     NVARCHAR(20),      
+    Region          NVARCHAR(50),
+    Product_ID      NVARCHAR(50),
+    Category        NVARCHAR(50),
+    Sub_Category    NVARCHAR(50),
+    Product_Name    NVARCHAR(255),
+    Sales           DECIMAL(10,2),     
+    Quantity        INT,
+    Discount        DECIMAL(5,2),     
+    Profit          DECIMAL(10,2),     
+    Unit_Price      DECIMAL(10,2),     
+    Cost            DECIMAL(10,2),     
+    dwh_create_date DATETIME DEFAULT GETDATE()
+);
+GO
