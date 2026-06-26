@@ -14,10 +14,10 @@ Parameters:
 	This stored procedure does not accept any parameters or return any values.
 
 Usage Example: 
-	EXEC silver.load_sales
+	EXEC silver.load_silver
 */
 
-CREATE OR ALTER PROCEDURE silver.load_sales_ AS 
+CREATE OR ALTER PROCEDURE silver.load_silver AS 
 BEGIN
 	DECLARE @start_time DATETIME, @end_time DATETIME, @batch_start_time DATETIME, @batch_end_time DATETIME;
 	BEGIN TRY 
